@@ -1,73 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | REJOICE®️</title>
-    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | REJOICE®</title>
+  
+  <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAALIElEQVR4AexdXYhdVxVe60wCpTTSSsGKSXwwxUSIFmoyM2oEQak1FRzbqQppbm0L4lOd4A/pi/jS4A8ZfRIh1t4YUDttRmhrFQWhUTOTKNQGmkjrg23UCsWWtpTSzNzVb+197mTu3L/zd+89+9x12Pv87r32Wt/3zTn77HPumYgqOEntI++T2t79cnDyXqlNHZXa5ENSm35SalPPSG36P1KbehX5LeRGnHUd+9wxLYOyWgd1nQ3Ygs0KQkXBC0AOTr9HDk59AUSCaEfyq0SN54iix4j5hyBtjohniWQfEe3C8t1YbkHejMxx1nXsEz2mZVBW69AcORuwBZtoQ0UCcagw0CbaRv2gU5ACkDumbwIZIHzqaWK5SEy/BAtzIBfEEYjE1mASbDshzbk20Tb8eBr5qPo0mCYHazUYAYie0mtTDwDs/1MkvwUsc8i7kUed1Ic59Ul9Q4aPe/eP2qmk7ZdaAHLgo++X2uT9APV50lM60ZcR2DXIZU3qG3yMHlOfne+IoazOql+lFICeTgHgSZpYvUDEh4loG3JoCT7Dd8SgsWhMZQygVALAX8ytgt66nk4B1gxyVdKMxqSxaYxlCqoUAhB3fZ9+kogfjjtyVM1JO5D8sBfCaPsJTXxHKgA5sPdDUps66a/vCk7TraovNVbXTzipGIwy2pEJQNC5o4noKQRfpVM9wkmVZhQDh0WqasUVjoozlcyS3Dn5GfzVP0O+c0c2KQJ8WDFRbHRrmHmoAkCQR0n4cQSI0TbMLa1HYJdi4zBav3fA60MRAE5xNyKwM4hFB2+wsNQDgTnFSjHrUaawQwMXgNw5fRcRnyWiPciWkiEArPisxy5ZhaylBioAPI37Hon8FM4xsqV0CLBi5zBMVy9V6YEIQGZnJ3AKe4iYv5HKGyvcjgAwVCwV0/aD6fdsrFG4AOSeyXfRlRf/SO4RLNlUCAI8q5g6bAuxd9lIoQLQFzHoEv++2qN5l8Eb7prsU2wdxgU2XJgA9MkdUeMJ+KaPR7GwNAAEgG3jCY91MdYLEYBT5cTqo3DpemRLg0XgejwlfdRhXkA7uQXgr0uNRfhi5AOEISVg3Vj02OdrMZcAXM/0UrQAF3BqwtzSMBHYTcDecZCj1VwCoCuf/wX5ly1zuGBVsyOAjqHjILuFzALwAxS4PcnettUsBAGe9Vz0NtbtaCYBuCFKDFB0M2r7h4wAuHCcZGg2tQCkNnkjhiiPZWjLqgwSAZFjjpuUbaQWABH/mIhsbJ9KN4ETx00qx1IJAI8pj8I6nlRhbqmMCOyJOUrsW2IBxG+r2PP8xNCOrOBczFUiBxILgIR/kMiiFRo9Aim4SiQAdC7uR1T2GhdACCTtijnr625fAfjXlll/ndPXmBUoEwJ8WLnr51FfAdBE9O1+Rux4SRFIwF1PAUjN/XplnN/bLymzid2aiTnsWqGnAIgmvtW1ph0IBIHeHHYVgNQmbyV70BMIyb3clH2ey85lugqAKLq3cxXbGx4C3bnsKAD/W3Y8agwvUvO4IwI4C9wxfVOnQx0FQJF8pVNh2xcwAl04bRNA/MKh9fwD5lpd75BnYm5bDrUJgCZWai0lbKM6CHTgtl0AxAeqE7FF0opAO7ctAhA/8LOttZJtVQiBbTHHayG1CAC3frj3XztmK5VEIGrheIMA6HNkU9URaOF4TQD+3p/0Q4dVB2Dc47sm5trhsCYA3Pt3HChwpWxWLQQiWeP6sgCIPlmtKMczmoRRr3HtBCD+s+f2866E6FWg2O6Y8+b/C5CPVSAoCyEVAp5zdwYgpslUda1w+AjEnHsBEH84/IgsgnQIeM5jAcgN6Spb6fAR8JxH8ZcmtoQfkEWQEoEtyj3OACs7U1a04pVBYGVnRMI7KhPPGAeSKXRwHxHzezNVtkrhIwDuIyLZGn4kFkE2BGQrBBBdl62y1Qofgeg6CECuDT8QiyAbAnItBMBXZ6tstcJHgK+GAOQqsmlMEZCrIAC6Ykyjt7CJrlABbDIkwkUgp+ebVAA5bVj1kBFQAayEHID5nguBFRXAm7lMWOWQEXgTAuDXQ47AfM+DAL8OAcgreUxY3ZARkFcgAH4p5BDM9zwI8EsQQOPFPCasbsgINF6EAPhiyCGMq+/FxM0XIxL5VzHGzEpwCID7iFieC85xc7gYBMB9RLTpQjHWzEp4CGy6EHH9L/+E468hWxovBF5T7iMfMz/llzYfHwQ857EA5K/jE7hF6hHwnHsBCC37nTYfGwRizr0AiP80NoEHHmhx7nvOnQD4+Ol/w/A5ZEvjgcC5mPPm9wFc1H9wc5uNAwJrXLszgIu4wb9zS5tVH4F1XK8JgH9+WgXwcvWjH/sIX465dkCsCcBtEf2abKo6Ai0cbxBA45GqR2/xtXLcIgCun3kcAL2AbKmaCLwQc7wWXYsA/F454Zc2LxMCxfjSzm27AFY31YtpzKyUDoEO3LYJgE/8+R9wfBHZUrUQWIy5bYmqTQDuaIN/4pY2qw4CXTjtKAB/n8inqhP9uEfCpzyn7Th0FIAv1viRX9o8fAS6c9lVAFxfxpgA21kgePb5lOeycyBdBeCLr37XL20eLgK9OewpgHjQwO4IRsh+zqYXYw67mukpAFdrtfEdt7RZeAgk4K6vAPjEmb8TyZHwoh93j+WI5643Dn0FoNXRibgPy/PIlsJA4HzMWV9vEwnAWWH5ulvarPwIpOAqsQD4weXfIPJ5ZEvlRmA+5iqRl4kFoNa4vnQIy7PIlsqJwNmYo8TepRKAtypfxVKQLZULAXDiuEnlVWoBcH35b8R8T6pWrHBqBFJXACeOm5QVUwtA7fODpx8gke/ruuUSIAAuHCcZXMkkAG2Hjy9/E+MDC7pueZQIyILnIpsPmQXgmntj+5eI2B4Y0agmYO84yN5+LgHwwsIqbW7Monn7WRlAGHI6p9g7DnI0nEsA2i4fW/4fUTSD9WeRLQ0HAWAdzXjs8zWYWwDaPOtXRlYnPot1OIa5pUEi8CwBa4d5Aa0UIgD1w79wGN2MdbscAIQBJWAb3eyxLqaFwgSg7jhVbpZPkXUMKevUvR46fMDWYdy9UOojhQpAW3fXpTe2fsJuERWNorIsEDB12BZlMrZTuADUrvZMMSp1uw0WKRo5sw7y1JdvV0xzWupYfSACaLbkBiiY78a2IFtKh4BgyP1uh2G6eqlKD1QA6okfopQ9WLeniAAhYQJWssdjl7BGxmIDF4D6xXiAxPWlvVi39wkAQp80r1gxMOtTrpDDQxFA01PW9wlY9mPbXi8DCBvSeQI2DqMNBwa5OVQBaCD6tgqC/ADuEuxFUwXEZTmimCg2bnOIs6ELoBkb15fvo9XGDdge598dLCoGigVwGEkamQA0Wn1tmetLnydq3EJjNXjEeILauEVjVwxohNNIBdCMW3+9wvXTHyeS26jSQlDi5TaNVWOmEkylEEATB64vP6LgUIM/jX1VujQsakwam8aI2EqTSiWAJir6W3bWS8PqxE6cFbSzGOKHq+CzHMGTu50ai8bUjK9My1IKoAmQPvVidBa5vrSdXD+BfoZjZf6YpfoGH931fTur7/6TO3C7nKnUAlgPmV4zub50F/I79XSKYzqohMejWBttUh/m1Sf1DRk+us/tjdarhK0HI4D18ejpFEAfQv4gCW8loS/iOAShnSwa5L+/gW3XxrxrE22rD8iH1Cf4EFwKUgDrUdbPnvPxpV85EnAngeU7iKId7pIh8jWUhTBkgfzdxXks/0vkRHIJS4mzriu5ekzL4DZN6xCIFtho4DY12qG2fUdu6ZBr039mHyayp1HXfBsAAP//U2tnRQAAAAZJREFUAwBuvkkKYzUlFgAAAABJRU5ErkJggg==" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main">
-        <div id="page1">
-            <div id="cursor">
-                <h5>Play Reel</h5>
-            </div>
-            <video autoplay muted loop src="./bg-video.mp4"></video>
-            <div id="page1-content">
-                <nav>
-                    <h3>The Venture Agency</h3>
-                    <h4>Menu</h4>
-                </nav>
-                <h1>
-                    <span>r</span>
-                    <span>e</span>
-                    <span>j</span>
-                    <span>o</span>
-                    <span>u</span>
-                    <span>i</span>
-                    <span>c</span>
-                    <span>e</span>
-                </h1>
 
-            </div>        
-        </div>
-        <div id="page2">
-           <section class="brand-hero">
-  <div class="header-row">
-    <div class="service-tag">
-      Full-service creative agency.<br />
-      Two engagement models.
-    </div>
-    <div class="author-name">Vedant Sonar</div>
+  <div id="loader">
+    <h3>Tomorrow's</h3>
+    <h3>Brand</h3>
+    <h3>Today"</h3>
   </div>
 
-  <h1 class="main-statement" id="statement">
-    We are a digital brand accelerator. We design, develop, and scale market-defining brands by unlocking their hidden potential. Choose full cash compensation or offset up to 50% of our fees for equity in your company. Your vision, your decision.
-  </h1>
-</section>
-        </div>
-        <div id="page3">
-            <div id="page3-top">
-                <h4>Agency & Venture <span>Models</span></h4>
-                <h2>Explore Our Services</h2>
-                <h2>Engagement Models</h2>
-            </div>
-            <div id="page3-elements">
-                <div class="box"><video autoplay loop muted src="./vid1.mp4"></video></div>
-                <div class="box"><video autoplay loop muted src="./vid2.mp4"></video></div>
-                <div class="box"><video autoplay loop muted src="./vid3.mp4"></video></div>
-            </div>
-            
-        </div>
-        <div id="page4">
-            <video autoplay loop muted src="./five.webm"></video>
-        </div>
+  <div id="main">
+    <div id="page1">
+      <div id="cursor">
+        <h5>Play Reel</h5>
+      </div>
+
+      <video autoplay muted loop src="./bg-video.mp4"></video>
+
+      <div id="page1-content">
+        <nav>
+          <h3>The Venture Agency</h3>
+          <h4>Menu</h4>
+        </nav>
+        <h1>
+          <span>r</span>
+          <span>e</span>
+          <span>j</span>
+          <span>o</span>
+          <span>u</span>
+          <span>i</span>
+          <span>c</span>
+          <span>e</span>
+        </h1>
+      </div>        
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha512-oJ8QbaQThQoJZ7oEv+29jfPM6CcP+zUxh3PKJs1vyOhx0UraUrE7PQgeItu3dOuCJyrzWpoYMsVjkkPEBzbUqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js" integrity="sha512-OaIE7ud4P04EhnBuhEcm0wQSceIxbi2pV03oBLS/+F6ampfxsnxcIxOp7H2eF9G7N0kEht0VAzOLG+dTLSo17Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+
+    <div id="page2">
+      <section class="brand-hero">
+        <div class="header-row">
+          <div class="service-tag">
+            Full-service creative agency.<br />
+            Two engagement models.
+          </div>
+          <div class="author-name">Vedant Sonar</div>
+        </div>
+
+        <h1 class="main-statement" id="statement">
+          We are a digital brand accelerator. We design, develop, and scale market-defining brands by unlocking their hidden potential. Choose full cash compensation or offset up to 50% of our fees for equity in your company. Your vision, your decision.
+        </h1>
+      </section>
+    </div>
+
+    <div id="page3">
+      <div id="page3-top">
+        <h4>Agency & Venture <span>Models</span></h4>
+        <h2>Explore Our Services</h2>
+        <h2>Engagement Models</h2>
+      </div>
+
+      <div id="page3-elements">
+        <div class="box">
+          <img src="./1st.avif" alt="">
+          <video autoplay loop muted src="./vid1.mp4"></video>
+        </div>
+        <div class="box">
+          <img src="./2img.avif" alt="">
+          <video autoplay loop muted src="./vid2.mp4"></video>
+        </div>
+        <div class="box">
+          <img src="./3rd.avif" alt="">
+          <video autoplay loop muted src="./vid3.mp4"></video>
+        </div>
+      </div>
+    </div>
+
+    <div id="page4">
+      <div id="page4-content">
+        <video autoplay loop muted src="./five.webm"></video>
+      </div>
+      <div id="page4-elem">
+        <div class="dream-container">
+          <div class="dream-orb">
+            <p class="dream-quote">
+              The future belongs to those who believe in the beauty of their dreams.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page6">
+      <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-brand-col">
+            <h2 class="footer-logo">Rejouice<span>.</span></h2>
+            
+            <div class="country-selector">
+              <label for="country">Country</label>
+              <select id="country">
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">India</option>
+                <option value="de">Germany</option>
+              </select>
+            </div>
+
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95C18.05 21.45 22 17.19 22 12z"/></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0-.01-3.28 1.64 1.64 0 0 0 .01 3.28m1.4 9.74V9.91H5.06v8.59h2.8z"/></svg>
+              </a>
+              <a href="#" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-columns">
+            <div class="footer-col">
+              <h3>Rejouice</h3>
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Extra O blog</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Email connect</a></li>
+                <li><a href="#">Sustainability</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h3>Customer</h3>
+              <ul>
+                <li><a href="#">Buy now pay later</a></li>
+                <li><a href="#">Contact us via app</a></li>
+                <li><a href="#">Customer service</a></li>
+                <li><a href="#">Shopping app</a></li>
+                <li><a href="#">Rewards club</a></li>
+                <li><a href="#">Buyer Protection Policy</a></li>
+                <li><a href="#">Feedback and complaints</a></li>
+                <li><a href="#">Shopping inspiration</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h3>Business</h3>
+              <ul>
+                <li><a href="#">Sell with Rejouice</a></li>
+                <li><a href="#">Payment methods</a></li>
+                <li><a href="#">Platforms and partners</a></li>
+                <li><a href="#">Partner program</a></li>
+                <li><a href="#">Business login</a></li>
+                <li><a href="#">Business support</a></li>
+                <li><a href="#">Operational status</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="disclaimer">
+            Monthly financing through Rejouice is issued by WebBank, member FDIC. Copyright © 2005-2025 Rejouice Inc. NMLS #1353190, 629 N. High Street, Third Floor, Columbus, OH 43215. Other CA resident loans made or arranged pursuant to a California Finance Lenders Law license.
+          </p>
+          <div class="legal-links">
+            <a href="#">Legal</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Cookies</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha512-oJ8QbaQThQoJZ7oEv+29jfPM6CcP+zUxh3PKJs1vyOhx0UraUrE7PQgeItu3dOuCJyrzWpoYMsVjkkPEBzbUqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js" integrity="sha512-OaIE7ud4P04EhnBuhEcm0wQSceIxbi2pV03oBLS/+F6ampfxsnxcIxOp7H2eF9G7N0kEht0VAzOLG+dTLSo17Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
 </body>
 </html>

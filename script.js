@@ -37,14 +37,13 @@ locoscroll()
 function cursorEffect(){
     var page1Content = document.querySelector("#page1-content")
     var cursor = document.querySelector("#cursor")
-
     page1Content.addEventListener("mousemove", function(dets){
     gsap.to(cursor,{
         x:dets.x,
         y:dets.y,
     })
     })
-    page1Content.addEventListener("mouseenter", function(dets){
+    page1Content.addEventListener("mouseenter", function(){
     gsap.to(cursor,{
         scale:1,
         opacity:1,
@@ -56,8 +55,10 @@ function cursorEffect(){
     opacity: 0,
     })
     })
+    
 }
 cursorEffect()
+
 
 function page2Animation(){
     gsap.from(".elem h1",{
@@ -74,3 +75,61 @@ function page2Animation(){
     })
 }
 page2Animation()
+
+
+var tl = gsap.timeline()
+tl.from("#loader h3",{
+  x:40,
+  opacity:0,
+  duration:1,
+  stagger:0.1,
+})
+tl.to("#loader h3",{
+  opacity:0,
+  x:-40,
+  stagger:0.1,
+})
+tl.to("#loader",{
+  opacity:0,
+  display: "none",
+})
+
+tl.from("#page1-content h1 span",{
+  y:100,
+  opacity:0,
+  stagger:0.2,
+  duration:0.5,
+})
+
+const statement = document.querySelector("#statement")
+const statementWords = statement.textContent.trim().split(/\s+/)
+
+statement.innerHTML = statementWords
+  .map((word) => `<span class="statement-word">${word}</span>`)
+  .join(" ")
+
+gsap.fromTo(".statement-word",
+  {
+    y: "1.1em",
+    opacity: 0,
+    filter: "blur(8px)",
+  },
+  {
+    y: "0em",
+    opacity: 1,
+    filter: "blur(0px)",
+    duration: 0.9,
+    ease: "power3.out",
+    stagger: 0.035,
+    scrollTrigger: {
+      trigger: "#statement",
+      scroller: "#main",
+      start: "top 78%",
+      end: "top 35%",
+      toggleActions: "play none none reverse",
+    },
+  }
+)
+
+
+
